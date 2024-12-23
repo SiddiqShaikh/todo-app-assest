@@ -24,7 +24,7 @@ export function useAuth() {
   const logout = () => {
     setStoredToken(null);
     setToken(null);
-    router.replace("/auth");
+    router.replace("/login");
   };
 
   return { token, loading, login, logout };

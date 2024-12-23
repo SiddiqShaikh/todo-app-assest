@@ -14,4 +14,29 @@ export interface ApiErrorResponse {
   details?: { message: string }[] | null;
 }
 
-//   export interface RegisterCredentials extends LoginCredentials {}
+export interface Todo {
+    _id: string;
+    title: string;
+    description: string;
+    completed: boolean;
+    owner: string;
+    createdAt: string;
+    updatedAt: string;
+    __v: number;
+  }
+
+export interface ApiResponse {
+  status: boolean;
+  todo: Todo[];
+  message: string;
+}
+
+export interface ApiSuccessResponse<T> {
+    status: true;
+    message: string;
+    todo?: T;
+  }
+  export interface CreateTodoData {
+    title: string;
+    description: string;
+  }

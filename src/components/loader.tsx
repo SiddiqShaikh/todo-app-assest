@@ -7,7 +7,6 @@ export default function Loader({ color }: ILoader) {
     <PuffLoader
       color={color ?? "white"}
       loading={true}
-      // cssOverride={override}
       size={15}
       aria-label="Loading Spinner"
       data-testid="loader"

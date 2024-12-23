@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  // Get stored auth data from cookies instead of localStorage
-  console.log("Middleware calling");
   const authToken = request.cookies.get("auth_token")?.value;
   const isAuthPage = ["/login", "/register"].includes(request.nextUrl.pathname);
 
